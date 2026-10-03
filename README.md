@@ -16,3 +16,13 @@ cd ~/ros2_ws
 source /opt/ros/humble/setup.bash
 colcon build --packages-select status_interfaces status_publisher
 source install/setup.bash
+
+## Run
+ros2 run status_publisher sys_status_pub
+ros2 run status_publisher sys_status_gui
+
+## 使用说明
+本项目包含两个ROS2功能包：
+- status_interfaces：自定义消息包，定义系统状态消息SystemStatus.msg
+- status_publisher：发布者节点采集系统CPU、内存、网络信息；订阅者节点基于PyQt5绘制图形界面展示数据。
+
